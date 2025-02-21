@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-str1 = input()
-str2 = input()
+import sys
+str1 = sys.argv[1]  # First part from the command line argument
+str2 = sys.argv[2]  # Second part from the command line argument
 print(f"{str1} {str2}")
