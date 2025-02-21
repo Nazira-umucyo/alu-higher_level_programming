@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-str1 = input()  # Expect input for first part
-str2 = input()  # Expect input for second part
+str1 = input()
+str2 = input()
 print(f"{str1} {str2}")
