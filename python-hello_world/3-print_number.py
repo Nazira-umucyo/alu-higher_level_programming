@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98  # Make sure it's an integer!
-print(f"{number} Battery street")
+number = 98
+# YOUR CODE GOES HERE. PLEASE REMOVE THIS LINE
