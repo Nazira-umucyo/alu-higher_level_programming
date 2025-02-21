@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-str1 = "object-oriented"
-str2 = "programming with Python"
-print(f"{str1} {str2}")  # Concatenating the variables
+str1 = input()  # Dynamically input the first part of the string
+str2 = input()  # Dynamically input the second part of the string
+print(f"{str1} {str2}")
