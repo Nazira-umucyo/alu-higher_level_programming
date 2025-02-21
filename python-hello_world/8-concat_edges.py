@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-str1 = "object-oriented"
-str2 = "programming with Python"
+str1 = input()  # Dynamically input the value
+str2 = input()  # Dynamically input the value
 print(f"{str1} {str2}")
