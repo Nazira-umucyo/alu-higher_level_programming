@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = 98  # Integer value
-print(f"{number} Battery street")  # f-string formatting
+number = 98  # The integer value
+print(f"{number} Battery street")  # Use f-string to print the integer and string
