@@ -1,3 +1,3 @@
 #!/usr/bin/python3
-number = "Holberton"  # This is a string
+number = 98  # This is an integer
 print(f"{number} Battery street")
