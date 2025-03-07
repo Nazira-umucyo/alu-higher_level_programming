@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 
-"""This module defines a class Square with a private size attribute, a method to
-calculate the area, and validation for the size parameter.
+"""This module defines a class Square with a private size attribute.
+It includes validation to ensure that size is an integer and is greater than or
+equal to 0.
 """
 
 
