@@ -1,28 +1,29 @@
 #!/usr/bin/python3
 
 """
-It includes property getters and setters to ensure that:
 - 'width' and 'height' must be integers.
 - 'width' and 'height' must be greater than or equal to zero.
+It also tracks the number of instances of the Rectangle class.
+It prints a message when an instance is deleted.
 """
 
 
 class Rectangle:
     """
-    A class to define a rectangle by its width and height.
     the values are integers and non-negative.
-    and to print the rectangle using the '#' character.
+    Also tracks the number of instances of Rectangle.
+    Prints a message when an instance is deleted.
     """
+
+    number_of_instances = 0
 
     def __init__(self, width=0, height=0):
         """
-        Initializes the rectangle with optional width and height.
         Arguments:
-            width (int): The width of the rectangle. Default is 0.
-            height (int): The height of the rectangle. Default is 0.
         """
         self.width = width
         self.height = height
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -71,3 +72,14 @@ class Rectangle:
         for i in range(self.__height):
             rectangle_str += "#" * self.__width + "\n"
         return rectangle_str.strip()
+
+    def __repr__(self):
+        """
+        using the eval() function.
+        """
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """Prints a message when the rectangle instance is deleted."""
+        Rectangle.number_of_instances -= 1
+        print("Bye rectangle...")

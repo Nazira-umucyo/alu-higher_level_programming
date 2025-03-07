@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 """
-It includes property getters and setters to ensure that:
 - 'width' and 'height' must be integers.
 - 'width' and 'height' must be greater than or equal to zero.
+Additionally, it prints a message when an instance is deleted.
 """
 
 
@@ -11,7 +11,7 @@ class Rectangle:
     """
     A class to define a rectangle by its width and height.
     the values are integers and non-negative.
-    and to print the rectangle using the '#' character.
+    Prints a message when an instance is deleted.
     """
 
     def __init__(self, width=0, height=0):
@@ -71,3 +71,13 @@ class Rectangle:
         for i in range(self.__height):
             rectangle_str += "#" * self.__width + "\n"
         return rectangle_str.strip()
+
+    def __repr__(self):
+        """
+        using the eval() function.
+        """
+        return f"Rectangle({self.__width}, {self.__height})"
+
+    def __del__(self):
+        """Prints a message when the rectangle instance is deleted."""
+        print("Bye rectangle...")
