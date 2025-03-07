@@ -5,6 +5,7 @@ height. It also provides getter and setter methods for both attributes,
 validation, and methods to calculate the area and perimeter of the rectangle.
 """
 
+
 class Rectangle:
     """
     A class to represent a rectangle.
