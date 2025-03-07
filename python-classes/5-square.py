@@ -6,7 +6,8 @@ Module for Square class definition.
 
 class Square:
     """
-    A class that defines a square with size validation and area calculation.
+    A class that defines a square with size validation, area calculation,
+    and a method to print the square with the character '#'.
     """
 
     def __init__(self, size=0):
@@ -44,3 +45,11 @@ class Square:
     def area(self):
         """Calculates and returns the area of the square."""
         return self.__size ** 2
+
+    def my_print(self):
+        """Prints the square with the character '#'."""
+        if self.__size == 0:
+            print()
+        else:
+            for _ in range(self.__size):
+                print('#' * self.__size)
