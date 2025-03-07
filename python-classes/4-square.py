@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 
-"""This module defines a class called Square. The class represents a square 
-with a private size attribute. It includes getter and setter methods for 
-validating and retrieving the size of the square. The setter ensures that the 
-size is an integer and greater than or equal to 0. The class also provides a 
+"""This module defines a class called Square. The class represents a square
+with a private size attribute. It includes getter and setter methods for
+validating and retrieving the size of the square. The setter ensures that the
+size is an integer and greater than or equal to 0. The class also provides a
 method to compute the area of the square.
 """
 
