@@ -3,6 +3,7 @@
 
 """This module defines a class Square with a private size attribute."""
 
+
 class Square:
     """Defines a square with a private size attribute."""
 
