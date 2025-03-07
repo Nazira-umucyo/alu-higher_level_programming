@@ -126,7 +126,7 @@ class Rectangle:
         Returns a string representation of the Rectangle object.
 
         Returns:
-            str: A string that represents the rectangle object, 
-                 showing its memory address.
+            str: A string that represents the rectangle object,
+                 showing its memory address in the required format.
         """
         return f"<{self.__class__.__module__}.{self.__class__.__name__} object at {hex(id(self))}>"
