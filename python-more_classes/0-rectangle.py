@@ -5,6 +5,7 @@ The class is empty and serves as a starting point for future extensions
 where properties and methods for the rectangle can be added.
 """
 
+
 class Rectangle:
     """
     A class to represent a rectangle.
