@@ -6,4 +6,10 @@ where properties and methods for the rectangle can be added.
 """
 
 class Rectangle:
+    """
+    A class to represent a rectangle.
+
+    This class is currently empty but can be expanded in the future
+    to include properties like width, height, area, perimeter, etc.
+    """
     pass
