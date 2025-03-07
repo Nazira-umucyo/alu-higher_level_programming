@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 """
-This module defines a class Rectangle that has private attributes width and height.
-It also provides getter and setter methods for both attributes, validation, 
-and methods to calculate the area and perimeter of the rectangle.
+This module defines a class Rectangle that has private attributes width and
+height. It also provides getter and setter methods for both attributes,
+validation, and methods to calculate the area and perimeter of the rectangle.
 """
+
 class Rectangle:
     """
     A class to represent a rectangle.
