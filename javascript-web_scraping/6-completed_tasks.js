@@ -1,27 +1,28 @@
-// File: 6-completed_tasks.js
+#!/usr/bin/node
+
 const request = require('request');
 
+// Get the API URL from command line arguments
 const url = process.argv[2];
 
-request.get(url, (error, response, body) => {
+// Make GET request
+request(url, (error, response, body) => {
   if (error) {
-    console.log(error);
-    return;
-  }
-  if (response.statusCode !== 200) {
-    console.log(`Error: Received status code ${response.statusCode}`);
+    console.error(error);
     return;
   }
 
   const todos = JSON.parse(body);
-  const completedCount = {};
+  const completedTasks = {};
 
-  todos.forEach(task => {
+  todos.forEach((task) => {
     if (task.completed) {
-      const userId = task.userId;
-      completedCount[userId] = (completedCount[userId] || 0) + 1;
+      if (!completedTasks[task.userId]) {
+        completedTasks[task.userId] = 0;
+      }
+      completedTasks[task.userId]++;
     }
   });
 
-  console.log(completedCount);
+  console.log(completedTasks);
 });

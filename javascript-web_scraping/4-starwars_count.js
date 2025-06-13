@@ -1,25 +1,26 @@
-// File: 4-starwars_count.js
+#!/usr/bin/node
+
 const request = require('request');
 
+// Get the API URL from command line
 const apiUrl = process.argv[2];
-const wedgeId = 'https://swapi-api.alx-tools.com/api/people/18/';
 
-request.get(apiUrl, (error, response, body) => {
+// Wedge Antilles character ID
+const wedgeId = '18';
+
+// Perform the GET request
+request(apiUrl, (error, response, body) => {
   if (error) {
-    console.log(error);
-    return;
-  }
-  if (response.statusCode !== 200) {
-    console.log(`Error: Received status code ${response.statusCode}`);
+    console.error(error);
     return;
   }
 
-  const data = JSON.parse(body);
-  const films = data.results;
-
+  const data = JSON.parse(body).results;
   let count = 0;
-  films.forEach(film => {
-    if (film.characters.includes(wedgeId)) {
+
+  data.forEach(film => {
+    // Check if any character URL includes `/18/`
+    if (film.characters.some(charUrl => charUrl.includes(`/people/${wedgeId}/`))) {
       count++;
     }
   });

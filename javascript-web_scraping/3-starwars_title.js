@@ -1,18 +1,19 @@
-// File: 3-starwars_title.js
+#!/usr/bin/node
+
 const request = require('request');
 
+// Get the movie ID from command line argument
 const movieId = process.argv[2];
+
+// Construct the API URL
 const url = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
-request.get(url, (error, response, body) => {
+// Make the GET request
+request(url, (error, response, body) => {
   if (error) {
-    console.log(error);
-    return;
+    console.error(error);
+  } else {
+    const film = JSON.parse(body);
+    console.log(film.title);
   }
-  if (response.statusCode !== 200) {
-    console.log(`Error: Received status code ${response.statusCode}`);
-    return;
-  }
-  const data = JSON.parse(body);
-  console.log(data.title);
 });
